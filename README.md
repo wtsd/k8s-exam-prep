@@ -6,7 +6,7 @@ from fundamentals to advanced scenarios. Includes:
 - Progressive labs (beginner → advanced)
 - Mock exams (task + solution)
 - Interview Q&A and whiteboard scenarios
-- Makefile for quick local cluster with **kind**
+- Makefile for a quick local cluster with **kind**
 
 > Designed to be copy‑paste friendly and GitHub‑ready. No proprietary exam content — just skills and patterns.
 
@@ -62,4 +62,3 @@ helm/                # tiny Helm chart for practice
 4. Review **best practices** and interview answers to close gaps.
 5. Repeat: speed + correctness + explanation.
 
-**Good luck — and have fun!**
