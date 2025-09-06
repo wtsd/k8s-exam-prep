@@ -38,5 +38,5 @@
 
 **A:** `kubectl describe pod` (events), check node resources/taints, scheduler logs, admission rejections, PVC/SC availability.
 
-> See more prompts in [interview/whiteboard-scenarios.md](interview/whiteboard-scenarios.md).
+> See more prompts in [interview/whiteboard-scenarios.md](./whiteboard-scenarios.md).
 
