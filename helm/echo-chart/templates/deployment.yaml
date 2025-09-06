@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "echo-chart.fullname" . }}
+  labels: {{- include "echo-chart.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels: {{- include "echo-chart.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels: {{- include "echo-chart.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: echoserver
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports: [{ containerPort: 8080 }]
+          resources: {{- toYaml .Values.resources | nindent 12 }}

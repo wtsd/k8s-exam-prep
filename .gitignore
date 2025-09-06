@@ -1,0 +1,16 @@
+# general
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+
+# kube
+.kube/
+*.kubeconfig
+
+# envs
+.env
+.env.*
+
+# archives
+*.zip

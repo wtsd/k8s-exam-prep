@@ -1,0 +1,6 @@
+apiVersion: v2
+name: echo-chart
+description: Tiny echo app for practice
+type: application
+version: 0.1.0
+appVersion: "1.4"

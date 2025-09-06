@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: demo-job
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: registry.k8s.io/busybox
+          args: ["sh", "-c", "echo processing; sleep 2; echo done"]

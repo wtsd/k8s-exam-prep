@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: probe-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: probe-app }
+  template:
+    metadata:
+      labels: { app: probe-app }
+    spec:
+      containers:
+        - name: web
+          image: registry.k8s.io/echoserver:1.4
+          ports: [{ containerPort: 8080 }]
+          livenessProbe:
+            httpGet: { path: "/", port: 8080 }
+            initialDelaySeconds: 5
+          readinessProbe:
+            httpGet: { path: "/", port: 8080 }
+            initialDelaySeconds: 5
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }

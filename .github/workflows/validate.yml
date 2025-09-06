@@ -1,0 +1,15 @@
+name: Validate Manifests
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  kubeconform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run kubeconform
+        uses: docker://ghcr.io/yannh/kubeconform:latest
+        with:
+          args: -summary -strict -schema-location default -schema-location https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/ -skip 'helm/.*' .

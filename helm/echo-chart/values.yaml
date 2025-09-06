@@ -1,0 +1,12 @@
+replicas: 1
+image:
+  repository: registry.k8s.io/echoserver
+  tag: "1.4"
+service:
+  type: ClusterIP
+  port: 80
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits: {}

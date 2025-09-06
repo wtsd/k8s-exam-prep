@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+spec:
+  containers:
+    - name: app
+      image: registry.k8s.io/busybox
+      envFrom:
+        - configMapRef: { name: app-config }
+        - secretRef:    { name: app-secret }
+      args: ["sh", "-c", "env | sort; sleep 3600"]
