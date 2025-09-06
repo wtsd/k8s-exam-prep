@@ -56,7 +56,7 @@ helm/                # tiny Helm chart for practice
 > This repo maps *public* exam domains to practical tasks.
 
 ## How to Study
-1. Skim the **Study Map** (docs/study-map.md) to plan your week(s).
+1. Skim the **[Study Map](docs/study-map.md)** to plan your week(s).
 2. Do labs in order. Timebox yourself (e.g., 7–12 min per task CKAD-style).
 3. Attempt **mock-exams** under realistic constraints (no internet besides docs).
 4. Review **best practices** and interview answers to close gaps.
